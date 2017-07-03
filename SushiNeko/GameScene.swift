@@ -18,6 +18,7 @@ enum GameState {
     case title, ready, playing, gameOver
 }
 
+
 class GameScene: SKScene {
     
     var health: CGFloat = 1.0 {
@@ -231,13 +232,13 @@ class GameScene: SKScene {
         character.run(SKAction.colorize(with: UIColor.red, colorBlendFactor: 1.0, duration: 0.50))
         
         /* Change play button selection handler */
-        playButton.selectedHandler = {
+        //playButton.selectedHandler = {
             
             /* Grab reference to the SpriteKit view */
             let skView = self.view as SKView!
             
             /* Load Game scene */
-            guard let scene = GameScene(fileNamed:"GameScene") as GameScene! else {
+            guard let scene = GameScene(fileNamed:"GameOver") as GameScene! else {
                 return
             }
             
@@ -246,6 +247,6 @@ class GameScene: SKScene {
             
             /* Restart GameScene */
             skView?.presentScene(scene)
-        }
+        //}
     }
 }
