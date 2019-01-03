@@ -38,6 +38,8 @@ class GameScene: SKScene {
         }
     }
     
+    static var passScore = 0
+    
     /* Game objects */
     var sushiBasePiece: SushiPiece!
     
@@ -217,6 +219,8 @@ class GameScene: SKScene {
     }
     func gameOver() {
         /* Game over! */
+        
+        GameScene.passScore = score
         
         state = .gameOver
         

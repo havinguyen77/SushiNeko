@@ -15,6 +15,7 @@ class GameOver: SKScene {
     
     override func didMove(to view: SKView) {
         scoreGameOver = childNode(withName: "scoreGameOver") as! SKLabelNode
+        scoreGameOver.text = String(GameScene.passScore)
         
         buttonPlayAgain = childNode(withName: "buttonPlayAgain") as! MSButtonNode
         
